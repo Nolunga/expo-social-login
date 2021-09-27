@@ -1,0 +1,63 @@
+{
+  "name": "expo-social-login",
+  "version": "0.0.1",
+  "description": "expo social login package",
+  "repository": "https://github.com/Nolunga/expo-social-login.git",
+  "author": "Nolunga Ngcakane <nolungan@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "OAuth",
+    "Social login",
+    "Facebook login",
+    "Instagram login",
+    "Google login",
+    "Apple login",
+    "React Native",
+    "React Native social login"
+  ],
+  "dependencies": {
+    "axios": "^0.21.1",
+    "expo-apple-authentication": "^3.2.1",
+    "expo-facebook": "^11.3.1",
+    "react-native-webview": "^11.6.2",
+    "expo-application": "^3.2.0",
+    "expo-auth-session": "^3.0.0",
+    "expo-crypto": "^8.4.0",
+    "expo-random": "^10.0.0",
+    "expo-web-browser": "^8.6.0"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/npm": "^7.0.10",
+    "@semantic-release/release-notes-generator": "^9.0.1",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-native": "^3.8.1",
+    "prettier": "^2.0.5",
+    "semantic-release": "^17.3.7",
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0"
+  },
+  "release": {
+    "branches": [
+      "develop"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      "@semantic-release/git"
+    ]
+  }
+}
