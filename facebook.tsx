@@ -1,5 +1,5 @@
 import * as Facebook from 'expo-facebook'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Image, TouchableOpacity } from 'react-native'
 
 const facebookLogo = require('./assets/images/facebook.png')
@@ -8,9 +8,10 @@ export type FacebookAuthProps = {
   facebookAppId: string
   onSuccess: (token: string) => void
   onError: (error: string) => void
+  customButton?: ReactNode
 }
 
-const FacebookAuth = ({ facebookAppId, onSuccess, onError }: FacebookAuthProps) => {
+const FacebookAuth = ({ facebookAppId, onSuccess, onError, customButton }: FacebookAuthProps) => {
   const facebookAuth = async () => {
     try {
       await Facebook.initializeAsync({ appId: facebookAppId })
@@ -29,7 +30,11 @@ const FacebookAuth = ({ facebookAppId, onSuccess, onError }: FacebookAuthProps) 
 
   return (
     <TouchableOpacity onPress={facebookAuth}>
-      <Image source={facebookLogo} style={{ height: 50, width: 50 }} />
+      {customButton ? (
+        customButton
+      ) : (
+        <Image source={facebookLogo} style={{ height: 50, width: 50 }} />
+      )}
     </TouchableOpacity>
   )
 }

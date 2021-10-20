@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, ReactNode } from 'react'
 import { TouchableOpacity, Image, AppState } from 'react-native'
 import * as GoogleSignIn from 'expo-auth-session/providers/google'
 import * as WebBrowser from 'expo-web-browser'
@@ -13,6 +13,7 @@ export type GoogleAuthProps = {
   googleIosClientId: string
   onSuccess: (token: string) => void
   onError: (error: string) => void
+  customButton: ReactNode
 }
 
 const GoogleAuth = ({
@@ -20,7 +21,8 @@ const GoogleAuth = ({
   googleAndroidClientId,
   googleIosClientId,
   onSuccess,
-  onError
+  onError,
+  customButton
 }: GoogleAuthProps) => {
   const [_, response, promptAsync] = GoogleSignIn.useAuthRequest({
     expoClientId: googleExpoClientId,
@@ -44,7 +46,11 @@ const GoogleAuth = ({
 
   return (
     <TouchableOpacity onPress={() => promptAsync()}>
-      <Image source={googleLogo} style={{ height: 50, width: 50 }} />
+      {customButton ? (
+        customButton
+      ) : (
+        <Image source={googleLogo} style={{ height: 50, width: 50 }} />
+      )}
     </TouchableOpacity>
   )
 }
