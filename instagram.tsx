@@ -18,7 +18,8 @@ const InstagramAuth = ({
   appSecret,
   redirectUrl,
   onSuccess,
-  onError
+  onError,
+  customButton
 }: InstagramAuthProps) => {
   const [showLogin, setShowLogin] = useState(false)
 
@@ -63,7 +64,11 @@ const InstagramAuth = ({
   return (
     <>
       <TouchableOpacity onPress={() => setShowLogin(true)}>
-        <Image source={instagramLogo} style={{ height: 50, width: 50 }} />
+        {customButton ? (
+          customButton
+        ) : (
+          <Image source={instagramLogo} style={{ height: 50, width: 50 }} />
+        )}
       </TouchableOpacity>
       <Modal visible={showLogin} animationType="slide">
         <SafeAreaView style={{ height: '100%' }}>
