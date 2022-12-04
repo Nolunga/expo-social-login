@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react'
-import { TouchableOpacity, Image, Platform } from 'react-native'
 import * as AppleAuthentication from 'expo-apple-authentication'
+import React, { ReactNode } from 'react'
+import { Image, Platform, TouchableOpacity } from 'react-native'
 
-const appleLogo = require('./assets/images/apple.png')
+const appleLogo = require('../assets/images/apple.png')
 
 export type AppleAuthProps = {
   customButton?: ReactNode

@@ -1,9 +1,9 @@
-import React, { useEffect, ReactNode } from 'react'
-import { TouchableOpacity, Image, AppState } from 'react-native'
+import { AuthSessionResult } from 'expo-auth-session'
 import * as GoogleSignIn from 'expo-auth-session/providers/google'
 import * as WebBrowser from 'expo-web-browser'
-import { AuthSessionResult } from 'expo-auth-session'
-const googleLogo = require('./assets/images/google.png')
+import React, { ReactNode, useEffect } from 'react'
+import { AppState, Image, TouchableOpacity } from 'react-native'
+const googleLogo = require('../assets/images/google.png')
 
 WebBrowser.maybeCompleteAuthSession()
 
