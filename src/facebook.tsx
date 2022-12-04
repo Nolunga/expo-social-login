@@ -2,7 +2,7 @@ import * as Facebook from 'expo-facebook'
 import React, { ReactNode } from 'react'
 import { Image, TouchableOpacity } from 'react-native'
 
-const facebookLogo = require('./assets/images/facebook.png')
+const facebookLogo = require('../assets/images/facebook.png')
 
 export type FacebookAuthProps = {
   facebookAppId: string

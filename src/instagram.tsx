@@ -3,7 +3,7 @@ import React, { ReactNode, useRef, useState } from 'react'
 import { Image, Modal, SafeAreaView, Text, TouchableOpacity } from 'react-native'
 import { WebView, WebViewNavigation } from 'react-native-webview'
 
-const instagramLogo = require('./assets/images/instagram.png')
+const instagramLogo = require('../assets/images/instagram.png')
 
 export type InstagramAuthProps = {
   customButton?: ReactNode
