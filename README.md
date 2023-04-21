@@ -14,6 +14,11 @@ The package uses the Expo AuthSession module to handle the OAuth2 flow, and prov
 - login with Instagram
 - login with Apple
 
+## Compatibility
+
+This package is compatible with expo version 45 and above.
+
+
 ## How to use this cute package
 
 ### Install the package
