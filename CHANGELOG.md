@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Nolunga/expo-social-login/compare/v1.1.0...v1.2.0) (2023-04-21)
+
+
+### Features
+
+* **docs:** update Readme ([8764c16](https://github.com/Nolunga/expo-social-login/commit/8764c16684d12704ca2b75552142006f22819748))
+
 # [1.1.0](https://github.com/Nolunga/expo-social-login/compare/v1.0.0...v1.1.0) (2022-12-04)
 
 
